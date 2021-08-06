@@ -1,6 +1,6 @@
 ## Shirts Project
 
-#### React online market
+#### React online market.
 
 ### You can
 - Create, log in or log out of an existing accout
