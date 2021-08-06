@@ -1,7 +1,7 @@
 ## Shirts Project
 
 ### You can
-- Create or log into an existing accout
+- Create, log in or log out of an existing accout
 - Set up your own cart
-- Order carts content
+- Order it
 - See your order history
