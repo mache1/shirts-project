@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Route, Switch, NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+import NavBar from './components/NavBar/NavBar';
+import Home from './components/Home/Home';
+import YourCart from './components/YourCart/YourCart';
+import YourOrders from './components/YourOrders/YourOrders';
+import Signup from './components/Signup/Signup';
+import Login from './components/Login/Login';
+
+const App = (props) => {
+    return (
+        <div className="app">
+            <header>
+                <NavBar />
+            </header>
+            <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/your-cart" exact component={YourCart} />
+                <Route path="/your-orders" exact render={() => {
+                    return props.userInfo ?
+                        <YourOrders /> :
+                        <div style={{ textAlign: 'center', fontSize: '1.5rem' }}>
+                            <NavLink to={{ pathname: '/login' }}>Login</NavLink> to see to your orders!
+                        </div>
+                }} />
+                <Route path="/signup" component={Signup} />
+                <Route path="/login" component={Login} />
+            </Switch>
+        </div>
+    );
 }
 
-export default App;
+const mapStateToProps = state => {
+    return {
+        userInfo: state.userInfo
+    }
+}
+
+export default connect(mapStateToProps, null)(App);

@@ -1,0 +1,12 @@
+.product-cards {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1350px) {
+    .product-cards {
+        flex-direction: column;
+    }
+}

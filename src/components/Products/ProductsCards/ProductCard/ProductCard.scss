@@ -1,0 +1,143 @@
+.product-card {
+    position: relative;
+    flex: 1 1 30%;
+    height: 500px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 20px;
+    overflow: hidden;
+    background-color: #000;
+
+    .product__name {
+        font-size: 1.75rem;
+        color: #000;
+        background-color: #fff;
+        padding: 5px 0;
+    }
+
+    img {
+        width: 450px;
+    }
+
+    .product-info {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px;
+        width: 100%;
+        background-color: #fff;
+
+        .price {
+            margin-right: 10px;
+            font-size: 1.5rem;
+
+            span {
+                font-size: 1.1rem;
+                font-weight: 700;
+            }
+        }
+
+        button {
+            padding: 8px 20px;
+
+            color: #fff;
+            background-color: #1F60DA;
+            border: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-family: inherit;
+            font-weight: 600;
+
+            transition: background-color 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #4483DB;
+            }
+        }
+    }
+}
+
+@media (max-width: 1350px) {
+    .product-card {
+        width: 75%;
+        margin: 25px auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .product-card {
+        img {
+            width: 75%;
+        }
+
+        .product-info {
+            .price {
+                font-size: 1.25rem;
+
+                span {
+                    font-size: 1rem;
+                }
+            }
+
+            button {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .product-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-card {
+        .product__name {
+            font-size: 1.5rem;
+        }
+
+        .product-info {
+            .price {
+                font-size: 1rem;
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+
+            button {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px) {
+    .product-card {
+        .product__name {
+            font-size: 1.5rem;
+        }
+
+        .product-info {
+            .price {
+                font-size: 0.9rem;
+
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+
+            button {
+                font-size: 0.7rem;
+                padding: 5px 10px;
+            }
+        }
+    }
+}
