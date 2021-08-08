@@ -3,7 +3,7 @@ import './ProductCard.scss';
 import { useState } from 'react';
 import { connect } from 'react-redux';
 import { actions } from '../../../../store/actions';
-import Modal from '../../../../hoc/Modal/Modal';
+import Modal from '../../../Modal/Modal';
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';

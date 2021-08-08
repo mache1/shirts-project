@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import CartItems from './CartItems/CartItems';
 import { useHistory } from 'react-router';
 import { actions } from '../../store/actions';
-import Modal from '../../hoc/Modal/Modal';
+import Modal from '../Modal/Modal';
 import { database } from '../../firebase';
 
 const YourCart = (props) => {

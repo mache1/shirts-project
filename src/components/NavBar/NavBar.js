@@ -3,7 +3,7 @@ import { NavLink, useHistory } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import { connect } from 'react-redux';
 import { actions } from '../../store/actions';
-import Overlay from '../../hoc/Overlay/Overlay';
+import Overlay from '../Overlay/Overlay';
 import Sidebar from '../Siderbar/Siderbar';
 import { useState } from 'react';
 
