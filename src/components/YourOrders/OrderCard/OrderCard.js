@@ -11,7 +11,7 @@ const OrderCard = (props) => {
     let seconds = fun(date.getSeconds());
     let minutes = fun(date.getMinutes());
     let hours = fun(date.getHours());
-    let day = fun(date.getDay() + 1);
+    let day = fun(date.getDatey());
     let month = fun(date.getMonth() + 1);
     let year = fun(date.getFullYear());
 

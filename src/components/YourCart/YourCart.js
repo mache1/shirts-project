@@ -37,7 +37,7 @@ const YourCart = (props) => {
     let totalPrice = 0;
     props.cart.forEach(i => totalPrice += Number(i.price));
 
-    const submitorder = () => {
+    const submitOrder = () => {
         if (props.userInfo === null)
             return history.push('/login');
 
@@ -61,7 +61,7 @@ const YourCart = (props) => {
             <>
                 <CartItems />
                 <p className="total-price">Total Price: <span>${totalPrice.toFixed(1)}</span></p>
-                <button className="order" onClick={submitorder}>ORDER</button>
+                <button className="order" onClick={submitOrder}>ORDER</button>
             </>;
     }
 
